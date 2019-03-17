@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  
+  <!-- <classPathEntry location="mysql-connector-java-5.1.27-bin.jar"/> -->
+  
+  <context id="context1" targetRuntime="MyBatis3">
+  	
+  	<!-- 不自动生成注释 -->
+  	<commentGenerator>
+  		<property name="suppressAllComments" value="true"/>
+  	</commentGenerator>
+  	
+	<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+		connectionURL="jdbc:mysql://115.159.69.68:18001/book?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true"
+		userId="caihuidadmin" password="TYBWhZdS2GxuLwBq" />
+    
+    <!-- 类型转换器,这里使用能转换成基本类型的转换器 -->
+    <!-- <javaTypeResolver type="org.mybatis.generator.internal.types.JavaTypeResolverCqfcImpl">
+    	<property name="forceBigDecimals" value="false"/>
+    </javaTypeResolver> -->
+    
+    <!-- 实体类生成器配置
+    	targetProject可使用绝对路径或相对路径
+    	使用命令行时可使用..\src
+     -->
+    <javaModelGenerator targetPackage="com.lalagg.recommend.bo" targetProject="..\jweb_book_recommend\src\main\java" >
+    	<property name="trimStrings" value="true"/>
+    </javaModelGenerator>
+    
+    <!-- *Mapper.xml生成器.若不需要,则将targetproject设为空值即可 -->
+    <sqlMapGenerator targetPackage="com.lalagg.recommend.dao.mapper" targetProject="..\jweb_book_recommend\src\main\java" />
+    
+    <!-- *Mapper.java接口生成器.若不需要,则将targetproject设为空值即可 -->
+    <javaClientGenerator targetPackage="com.lalagg.recommend.dao.mapper" targetProject="..\jweb_book_recommend\src\main\java" type="ANNOTATEDMAPPER"/>
+    
+    <!-- <table schema="" tableName="t_read_record" domainObjectName="ReadRecord"
+    	enableInsert="false" enableUpdateByPrimaryKey="false"
+    	enableDeleteByPrimaryKey="false" modelType="flat"
+    	enableCountByExample="false" enableDeleteByExample="false"
+    	enableSelectByExample="false" enableUpdateByExample="false">
+   		<property name="useActualColumnNames" value="false"/>
+   		<property name="rootInterface" value="com.lalagg.recommend.common.mybatis.BaseMapper"/>
+   		<property name="rootClass" value="com.lalagg.recommend.common.mybatis.BaseDo"/>
+   		<columnRenamingRule searchString="^F" replaceString=""/>
+   	</table>
+   	<table schema="" tableName="t_book" domainObjectName="Book"
+    	enableInsert="false" enableUpdateByPrimaryKey="false"
+    	enableDeleteByPrimaryKey="false" modelType="flat"
+    	enableCountByExample="false" enableDeleteByExample="false"
+    	enableSelectByExample="false" enableUpdateByExample="false">
+   		<property name="useActualColumnNames" value="false"/>
+   		<property name="rootInterface" value="com.lalagg.recommend.common.mybatis.BaseMapper"/>
+   		<property name="rootClass" value="com.lalagg.recommend.common.mybatis.BaseDo"/>
+   		<columnRenamingRule searchString="^F" replaceString=""/>
+   	</table>
+   	<table schema="" tableName="t_user" domainObjectName="User"
+    	enableInsert="false" enableUpdateByPrimaryKey="false"
+    	enableDeleteByPrimaryKey="false" modelType="flat"
+    	enableCountByExample="false" enableDeleteByExample="false"
+    	enableSelectByExample="false" enableUpdateByExample="false">
+   		<property name="useActualColumnNames" value="false"/>
+   		<property name="rootInterface" value="com.lalagg.recommend.common.mybatis.BaseMapper"/>
+   		<property name="rootClass" value="com.lalagg.recommend.common.mybatis.BaseDo"/>
+   		<columnRenamingRule searchString="^F" replaceString=""/>
+   	</table> -->
+   	<!-- <table schema="" tableName="t_collect_record" domainObjectName="CollectRecord"
+    	enableInsert="false" enableUpdateByPrimaryKey="false"
+    	enableDeleteByPrimaryKey="false" modelType="flat"
+    	enableCountByExample="false" enableDeleteByExample="false"
+    	enableSelectByExample="false" enableUpdateByExample="false">
+   		<property name="useActualColumnNames" value="false"/>
+   		<property name="rootInterface" value="com.lalagg.recommend.common.mybatis.BaseMapper"/>
+   		<property name="rootClass" value="com.lalagg.recommend.common.mybatis.BaseDo"/>
+   		<columnRenamingRule searchString="^F" replaceString=""/>
+   	</table>
+   	<table schema="" tableName="t_share_record" domainObjectName="ShareRecord"
+    	enableInsert="false" enableUpdateByPrimaryKey="false"
+    	enableDeleteByPrimaryKey="false" modelType="flat"
+    	enableCountByExample="false" enableDeleteByExample="false"
+    	enableSelectByExample="false" enableUpdateByExample="false">
+   		<property name="useActualColumnNames" value="false"/>
+   		<property name="rootInterface" value="com.lalagg.recommend.common.mybatis.BaseMapper"/>
+   		<property name="rootClass" value="com.lalagg.recommend.common.mybatis.BaseDo"/>
+   		<columnRenamingRule searchString="^F" replaceString=""/>
+   	</table> -->
+   	
+   	<table schema="" tableName="t_booklist_day_statistic" domainObjectName="BookStatistic"
+    	enableInsert="false" enableUpdateByPrimaryKey="false"
+    	enableDeleteByPrimaryKey="false" modelType="flat"
+    	enableCountByExample="false" enableDeleteByExample="false"
+    	enableSelectByExample="false" enableUpdateByExample="false">
+   		<property name="useActualColumnNames" value="false"/>
+   		<property name="rootInterface" value="com.lalagg.recommend.common.mybatis.BaseMapper"/>
+   		<property name="rootClass" value="com.lalagg.recommend.common.mybatis.BaseDo"/>
+   		<columnRenamingRule searchString="^F" replaceString=""/>
+   	</table>
+  </context>
+</generatorConfiguration>
